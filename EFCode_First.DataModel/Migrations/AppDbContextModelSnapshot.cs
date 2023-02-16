@@ -147,8 +147,9 @@ namespace EFCode_First.DataModel.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("SupplierName")
-                        .HasColumnType("int");
+                    b.Property<string>("SupplierName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("SupplierId");
 

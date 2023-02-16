@@ -9,7 +9,7 @@ namespace EFCode_First.DataModel
     public class Supplier
     {
         public int SupplierId { get; set; }
-        public int SupplierName { get; set;}
+        public string SupplierName { get; set;}
         public int? ContactNum { get; set; }
         public string? Email { get; set; }
 

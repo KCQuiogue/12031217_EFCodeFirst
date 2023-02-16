@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFCode_First.DataModel.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230216070900_UpdatedDatabaseTables")]
-    partial class UpdatedDatabaseTables
+    [Migration("20230216082339_FixedSupplierNameDataType")]
+    partial class FixedSupplierNameDataType
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -150,8 +150,9 @@ namespace EFCode_First.DataModel.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("SupplierName")
-                        .HasColumnType("int");
+                    b.Property<string>("SupplierName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("SupplierId");
 
