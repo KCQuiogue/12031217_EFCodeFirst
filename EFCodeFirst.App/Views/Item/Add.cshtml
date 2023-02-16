@@ -1,0 +1,20 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Item
+
+<h3>Add New Item</h3>
+
+<form asp-controller="Item" aso-action="Add" method="post">
+    <label asp-for="ItemName"></label>
+    <input type="text" asp-for="ItemName" class="form-control" />
+    <br />
+    <label asp-for="Stock"></label>
+    <input type="number" asp-for="Stock" class="form-control" />
+    <br />
+
+    <a asp-controller="Item" asp-action="Index" class="btn btn-primary">
+        Back
+    </a>
+    <input type="submit" value="Add Item" class="btn btn-success" />
+</form>

@@ -18,8 +18,4 @@
     <ProjectReference Include="..\EFCode_First.DataModel\EFCode_First.DataModel.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\Item\" />
-  </ItemGroup>
-
 </Project>
