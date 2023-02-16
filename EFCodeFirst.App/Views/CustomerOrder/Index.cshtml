@@ -1,0 +1,66 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<CustomerOrder>
+
+<a asp-controller="Home" asp-action="Index" class="btn btn-primary">
+    Back to Home Page
+</a>
+<a asp-controller="CustomerOrder" asp-action="Add" class="btn btn-success">
+    Add New CustomerOrder
+</a>
+<br />
+<br />
+
+@if (Model.Count() < 1)
+{
+    <div class="alert alert-info">
+        No CustomerOrder Records Found.
+    </div>
+}
+else
+{
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Customer</th>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Order Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var CustomerOrder in Model)
+            {
+                <tr>
+                    <td>@CustomerOrder.CustomerId</td>
+                    <td>@CustomerOrder.ItemId</td>
+                    <td>@CustomerOrder.Quantity</td>
+                    <td>@CustomerOrder.OrderDate</td>
+                    <td>
+                        <a asp-controller="CustomerOrder" asp-action="Edit" asp-route-id="@CustomerOrder.Id" class="btn btn-info btn-sm">
+                            Edit
+                        </a>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger btn-sm deleteBtn">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@section Scripts {
+    <script>
+        $('.deleteBtn').click(function (e) {
+            swal({
+                title: "Are you sure?",
+                text: "Are you sure you want to delete this record?",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true
+            })
+        });
+    </script>
+}

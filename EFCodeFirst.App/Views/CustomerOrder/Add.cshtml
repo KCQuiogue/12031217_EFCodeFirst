@@ -1,16 +1,16 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@model ItemOrder
+@model CustomerOrder
 
-<h3>Edit Item Order</h3>
+<h3>Add New Customer Order</h3>
 
-<form asp-controller="ItemOrder" asp-action="Edit" method="post">
-    <label asp-for="ItemId">Item</label>
-    <input type="number" asp-for="ItemId" class="form-control" />
+<form asp-controller="CustomerOrder" aso-action="Add" method="post">
+    <label asp-for="CustomerId">Customer</label>
+    <input type="number" asp-for="CustomerId" class="form-control" />
     <br />
-    <label asp-for="SupplierId"></label>
-    <input type="number" asp-for="SupplierId" class="form-control" />
+    <label asp-for="ItemId"></label>
+    <input type="number" asp-for="ItemId" class="form-control" />
     <br />
     <label asp-for="Quantity"></label>
     <input type="number" asp-for="Quantity" class="form-control" />
@@ -19,8 +19,8 @@
     <input type="datetime" asp-for="OrderDate" class="form-control" />
     <br />
 
-    <a asp-controller="ItemOrder" asp-action="Index" class="btn btn-primary">
+    <a asp-controller="CustomerOrder" asp-action="Index" class="btn btn-primary">
         Back
     </a>
-    <input type="submit" class="btn btn-success" value="Save Changes" />
+    <input type="submit" value="Add CustomerOrder" class="btn btn-success" />
 </form>
