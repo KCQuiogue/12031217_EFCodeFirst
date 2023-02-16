@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFCode_First.DataModel.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230216082339_FixedSupplierNameDataType")]
-    partial class FixedSupplierNameDataType
+    [Migration("20230216091029_FinalizedDatabase")]
+    partial class FinalizedDatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
