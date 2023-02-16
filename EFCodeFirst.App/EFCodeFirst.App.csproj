@@ -20,7 +20,6 @@
 
   <ItemGroup>
     <Folder Include="Views\Item\" />
-    <Folder Include="Views\Supplier\" />
   </ItemGroup>
 
 </Project>
