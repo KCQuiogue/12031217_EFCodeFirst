@@ -10,6 +10,7 @@
     Add New Customer
 </a>
 <br />
+<br />
 
 @if (Model.Count() < 1)
 {
@@ -37,7 +38,7 @@ else
                     <td>@item.ContactNum</td>
                     <td>@item.Email</td>
                     <td>
-                        <a asp-controller="Customer" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-info btn-sm">
+                        <a asp-controller="Customer" asp-action="Edit" asp-route-id="@item.CustomerId" class="btn btn-info btn-sm">
                             Edit
                         </a>
                     </td>

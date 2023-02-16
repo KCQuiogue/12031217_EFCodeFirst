@@ -10,6 +10,7 @@
     Add New Item
 </a>
 <br />
+<br />
 
 @if (Model.Count() < 1)
 {
@@ -33,7 +34,7 @@ else
                     <td>@item.ItemName</td>
                     <td>@item.Stock</td>
                     <td>
-                        <a asp-controller="Item" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-info btn-sm">
+                        <a asp-controller="Item" asp-action="Edit" asp-route-id="@item.ItemId" class="btn btn-info btn-sm">
                             Edit
                         </a>
                     </td>

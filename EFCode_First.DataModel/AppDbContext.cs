@@ -9,6 +9,8 @@ namespace EFCode_First.DataModel
 {
     public class AppDbContext :DbContext
     {
+        public AppDbContext(DbContextOptions options) : base(options) { } 
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Data Source=csb-entpro.wongph.com;Initial Catalog=ENTRPOG_000012031217_EFCodeFirst;Persist Security Info=True;TrustServerCertificate=True;User ID=12031217;Password=uV8qD5oX");
